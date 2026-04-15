@@ -1,0 +1,13 @@
+{
+  "name": "visal-forms-backend",
+  "version": "1.0.0",
+  "description": "Visal Academy form submission handler with Resend",
+  "main": "api/submit.js",
+  "scripts": {
+    "dev": "node api/submit.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "resend": "^3.0.0"
+  }
+}

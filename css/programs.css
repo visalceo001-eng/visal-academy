@@ -1,0 +1,194 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Manrope', sans-serif;
+  color: #f2f2f2;
+  background: #070707;
+  --primary: #ff915a;
+  --surface: #111111;
+  --text-muted: #b8b8b8;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: radial-gradient(circle at top center, #1d1d1d 0%, #070707 30%, #030303 100%);
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+img {
+  width: 100%;
+  display: block;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(180deg, rgba(255, 145, 90, 0.95), rgba(255, 120, 0, 0.92));
+  border-bottom: 2px solid rgba(255, 145, 90, 0.9);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.brand {
+  color: #fff;
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.2rem;
+}
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+.site-nav a {
+  color: #d5d5d5;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+}
+.whatsapp-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.72rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff915a 0%, #ffcd82 100%);
+  color: #111;
+  border: 1px solid rgba(255, 145, 90, 0.4);
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 14px 30px rgba(255, 145, 90, 0.2);
+}
+.whatsapp-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 35px rgba(255, 145, 90, 0.28);
+}
+.page-hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25) 60%), linear-gradient(180deg, rgba(255, 145, 90, 0.08), transparent 60%), url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  color: #fff;
+  padding: 6rem 0 4rem;
+}
+.hero-content {
+  max-width: 760px;
+}
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.page-hero h1 {
+  margin: 0;
+  font-family: 'Lexend', sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+}
+.page-hero p {
+  margin-top: 1.5rem;
+  color: #d1d1d1;
+}
+.programs-list {
+  padding: 4rem 0;
+}
+.programs-list .container {
+  display: grid;
+  gap: 1.75rem;
+}
+.program-card {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.75rem;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.22);
+}
+.program-card.featured {
+  border-color: var(--primary);
+}
+.program-details {
+  padding: 2rem;
+}
+.program-details h2 {
+  margin: 0 0 0.75rem;
+  font-family: 'Lexend', sans-serif;
+}
+.program-tag {
+  text-transform: uppercase;
+  color: var(--primary);
+  font-size: 0.84rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+.program-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  color: #c7c7c7;
+}
+.program-details li {
+  margin-bottom: 0.85rem;
+}
+.program-details p {
+  margin-bottom: 1.7rem;
+  color: #c7c7c7;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #111;
+  background: var(--primary);
+  text-decoration: none;
+}
+.site-footer {
+  background: linear-gradient(180deg, rgba(255, 120, 0, 0.95), rgba(30, 15, 0, 0.95));
+  border-top: 2px solid rgba(255, 145, 90, 0.9);
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-contact-cta {
+  margin-top: 1rem;
+}
+.footer-contact-cta .whatsapp-cta {
+  border-color: rgba(255, 145, 90, 0.55);
+}
+.footer-nav a {
+  color: #d5d5d5;
+}
+@media (max-width: 980px) {
+  .programs-list .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .site-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
