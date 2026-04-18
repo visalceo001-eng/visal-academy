@@ -80,7 +80,14 @@ body {
   color: #fff;
   padding: 6rem 0 4rem;
 }
-.hero-content {
+.hero-content,
+.page-hero .hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
   max-width: 760px;
 }
 .eyebrow {
@@ -401,4 +408,29 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+/* Contact page h1 styling - golden color */
+.page-hero h1 {
+  color: #ffcd82 !important;
+  text-align: center !important;
+}
+
+.page-hero p {
+  text-align: center !important;
+}
+
+.hero-content {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.contact-grid {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+}
+
+.contact-form {
+  order: -1;
 }
