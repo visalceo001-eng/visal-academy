@@ -109,6 +109,15 @@ img {
   overflow: visible;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.22);
   text-align: center;
+  transition: all 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+.program-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 145, 90, 0.4);
+  box-shadow: 0 40px 90px rgba(255, 145, 90, 0.2), 0 30px 70px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #111111 0%, rgba(255, 145, 90, 0.06) 100%);
 }
 .program-card img {
   width: 200px;
@@ -117,14 +126,19 @@ img {
   object-fit: cover;
   margin: 2rem auto 1rem;
   border: 3px solid rgba(255, 145, 90, 0.2);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .program-card:hover img {
-  transform: scale(1.05);
-  border-color: rgba(255, 145, 90, 0.5);
+  transform: scale(1.08) rotate(2deg);
+  border-color: var(--primary);
+  box-shadow: 0 0 30px rgba(255, 145, 90, 0.4);
 }
 .program-card.featured {
   border-color: var(--primary);
+  background: linear-gradient(135deg, #111111 0%, rgba(255, 145, 90, 0.08) 100%);
+}
+.program-card.featured:hover {
+  background: linear-gradient(135deg, #111111 0%, rgba(255, 145, 90, 0.15) 100%);
 }
 .program-details {
   padding: 2rem;
@@ -207,6 +221,30 @@ img {
 @media (max-width: 640px) {
   .programs-list .container {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .program-card {
+    border-radius: 1.5rem;
+  }
+  .program-card img {
+    width: 150px;
+    height: 150px;
+    margin: 1.5rem auto 1rem;
+  }
+  .program-card:hover img {
+    transform: scale(1.1) rotate(3deg);
+  }
+  .program-details {
+    padding: 1.5rem;
+  }
+  .program-details h2 {
+    font-size: 1.3rem;
+  }
+  .program-tag {
+    font-size: 0.75rem;
+  }
+  .program-details ul {
+    font-size: 0.85rem;
   }
   .header-inner {
     flex-direction: column;

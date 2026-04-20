@@ -2,6 +2,7 @@
   "name": "visal-forms-backend",
   "version": "1.0.0",
   "description": "Visal Academy form submission handler with Resend",
+  "type": "module",
   "main": "api/submit.js",
   "scripts": {
     "dev": "node api/submit.js",

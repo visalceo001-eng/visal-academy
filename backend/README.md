@@ -2,52 +2,49 @@
 
 This backend handles form submissions from your website and sends confirmation emails via Resend.
 
-## Setup Instructions
+## ✅ DEPLOYMENT INSTRUCTIONS (REQUIRED FOR FORMS TO WORK)
 
-### 1. Get Your Resend API Key
-- Go to [https://resend.com](https://resend.com)
-- Sign up for a free account
-- Navigate to **API Keys** and copy your key
-
-### 2. Deploy to Vercel
-
-**Option A: Git + GitHub(easiest)**
-```bash
-# 1. Commit your code to GitHub
-git add .
-git commit -m "Add form backend"
-git push origin main
-
-# 2. Go to https://vercel.com
-# 3. Click "New Project"
-# 4. Select your GitHub repository
-# 5. Set environment variable:
-#    - Name: RESEND_API_KEY
-#    - Value: your-resend-api-key
-# 6. Click Deploy
-
-# Your API endpoint will be: https://your-project-domain.vercel.app/api/submit
-```
-
-**Option B: Vercel CLI (direct deployment)**
+### Step 1: Install Vercel CLI
 ```bash
 npm install -g vercel
+```
+
+### Step 2: Deploy to Vercel
+Navigate to the backend folder and run:
+```bash
 cd backend
-vercel --env RESEND_API_KEY=your-resend-api-key
+vercel --prod
 ```
 
-### 3. Update Your Forms
+This will:
+- Create a new Vercel project (or link to existing)
+- Deploy your API to production
+- Give you a deployment URL like: `https://visal-academy.vercel.app/api/submit`
 
-Once deployed, update the `FORM_ENDPOINT` in `js/forms.js`:
+### Step 3: Forms Will Work Automatically
+Once deployed, the forms on your website will automatically submit to:
+- `https://visal-academy.vercel.app/api/submit`
 
-```javascript
-const FORM_ENDPOINT = 'https://your-vercel-domain.vercel.app/api/submit';
-```
+Emails will be sent to: `visalceo001@gmail.com`
 
-## How It Works
+---
 
-1. User fills out form on your website
-2. Form data is sent to your backend
+## Backend Configuration
+
+**API Key:** `re_NtYNaDXP_Dyrfvi5WqCXE5h6hopPyKSdy`
+
+**Email Notifications:** visalceo001@gmail.com
+
+**Available Endpoints:**
+- `POST /api/submit` - Form submission endpoint
+
+### Form Fields Expected:
+- `name` - Athlete Name (required)
+- `guardian` - Parent/Guardian (required)
+- `email` - Email Address (required)
+- `phone` - Phone Number (optional)
+- `program` - Preferred Program (required)
+- `message` - Goals/Message (required)
 3. Backend uses Resend API to email `visalceo001@gmail.com`
 4. User sees success modal with contact details
 5. You receive email with all submission details
